@@ -1,513 +1,695 @@
-// Why create functions ? Reason ?
-
-// 1. Modular approach(Modules) - Small Small parts me divide
-// 2. Reuse function sum 2 numbers add - Reuse
-// 3. Maintainance easy ho jata hai
-// 4. Coding Guidelines suggests creating functions plus other rules
-// 5. Function independent, other code se alag
-
-
-// 3 ways
-// function declaration
-
-// Camel Casing
-// sumOfTwoNumbers
-// printTwoNumbers
-// calculatePercentage
-// calculateInterest
-// printResult
-
-// 7 max parameters
-// return some values else JS will return undefined
-// Only 1 return statement will work which comes first
-// function openAccount(name, fatherName, aadharCardNo, mobile, email)
-// Arguments value will assign from left to right to the parameters
-// Agar parameters declare kiye tab b argument dena jruri ni hai
-// Syntax of function declaration
-
-function functionName(para1, para2, para3) {
-    //code....
-    return someValue;
-}
-
-// Value will be assigned if passed
-// Value will be undefined if not passed
-// Values will be ignored if parameters position not matched
-
-functionName(arg1, arg2, arg3);
-functionName(arg1, arg2);
-functionName(arg1);
-functionName();
-functionName(arg1, arg2, arg3, arg4, arg5);
-
-
-
-
-function printHello() {
-    console.log("Hello");
-}
-printHello();
-
-
-function printName(name) {
-    console.log(name);
-}
-printName("Wecode");
-printName();
-printName("WEcode", "Jaipur");
-
-
-function printTwoNumbers(num1, num2) {
-    console.log(num1, num2);
-}
-printTwoNumbers(1, 2);
-printTwoNumbers(1);
-printTwoNumbers(2);
-printTwoNumbers();
-printTwoNumber(); // error
-printTwoNumbers(5, 10, 15, 20, 25);
-
-
-function addTwoNumbers(num1, num2) {
-    console.log(num1 + num2);
-    return 1;
-}
-addTwoNumbers(10, 20);
-addTwoNumbers(10);
-addTwoNumbers(10, 20, 30, 40, 50);
-console.log(addTwoNumbers(10, 20)); //Jo function return krega vhi print hoga
-console.log(addTwoNumbers(10, 20));
-let ans2 = addTwoNumbers(10, 20);
-console.log(ans2 + 100);
-
-
-function checkReturnValue() {
-    return 1;
-    let a = 10;
-    console.log(a);
-    return 2;
-    return 3;
-    let b = 20;
-    console.log(b);
-    return 4;
-    return 5;
-}
-
-console.log(checkReturnValue());
-
-
-
-
-sum(10, 20); //Call/Invoke/Execute/Run
-
-function max(num1, num2) {
-    if (num1 > num2) {
-        return num1;
-    } else if (num2 > num1) {
-        return num2;
-    } else {
-        console.log("Both Are Equal");
-        return 501;
-    }
-}
-let ans3 = max(40, 20);
-console.log(ans3);
-
-let ans4 = max(20, 20);
-console.log(ans4);
-
-
-function max(num1, num2, num3) {
-    if (num1 > num2 && num1 > num3) {
-        return num1;
-    } else if (num2 > num1 && num2 > num3) {
-        return num2;
-    } else if (num3 > num1 && num3 > num2) {
-        return num3;
-    } else {
-        console.log("All three numbers Are Equal");
-    }
-}
-let ans = max(40, 50, 60);
-console.log(ans);
-
-
-function fn1() {
-    console.log(1);
-}
-function fn2() {
-    console.log(2);
-}
-function fn3() {
-    console.log(3);
-}
-fn1();
-fn2();
-fn3();
-
-
-function fn1() {
-    console.log(1);
-    fn2();
-}
-function fn2() {
-    console.log(2);
-    fn3();
-}
-function fn3() {
-    console.log(3);
-
-}
-fn1();
-
-
-function cafeBae() {
-    console.log("Chai");
-    mojoCafe();
-    console.log("Coffee");
-}
-function mojoCafe() {
-    console.log("Juice");
-    starCafe();
-    console.log("Shake");
-}
-function starCafe() {
-    console.log("Pasta");
-    dominos();
-    console.log("French Fries");
-}
-function dominos() {
-    console.log("Pizza");
-}
-cafeBae(); //Chai Juice Pasta Pizza FrenchFries Shake Coffee
-console.log("Hello World");
-
-
-function fn1() {
-    console.log(1);
-    console.log(2);
-    fn2();
-    console.log(3);
-}
-function fn2() {
-    console.log(4);
-    fn3();
-    console.log(5);
-    console.log(6);
-}
-function fn3() {
-    console.log(7);
-    console.log(8);
-    console.log(9);
-}
-fn1();// 1 2 4 7 8 9 5 6 3
-fn2();// 4 7 8 9 5 6
-fn3();// 7 8 9
-
-
-
-function fn1() {
-    console.log(1);
-    console.log(2);
-    fn2();
-    fn3();
-    console.log(3);
-}
-function fn2() {
-    console.log(4);
-    console.log(5);
-    console.log(6);
-}
-function fn3() {
-    console.log(7);
-    console.log(8);
-    console.log(9);
-}
-fn1();
-fn2();
-fn3();
-
-
-function fn1() {
-    console.log(1);
-    console.log(2);
-    fn2();
-    fn3();
-    console.log(3);
-}
-function fn2() {
-    console.log(4);
-    console.log(5);
-    fn3();
-    console.log(6);
-}
-function fn3() {
-    console.log(7);
-    console.log(8);
-    console.log(9);
-}
-fn1();// 1 2 4 5 7 8 9 6 7 8 9 3
-fn2();// 4 5 7 8 9 6
-fn3();// 7 8 9
-
-
-
-
-
-
-
-
-
-// // 1.
-function sum(a, b, c) {
-    console.log(a, b, c);
-}
-sum(12, 15, 20);
-sum();
-sum(12);
-sum(12, 20);
-
-// // 2.
-function num(a, b) {
-    console.log(a + b);
-    return "Wecode";
-}
-let a = num(10, 20);
-console.log(a);
-
-console.log(num(1, 1));
-
-// // 3.
-function sum() {
-    return 123;
-
-}
-console.log(sum());
-
-
-// // 4.
-function oddEven(a) {
-    if (a % 2 === 0) {
-        return "Even";
-
-    } else {
-        return "Odd"
-    }
-}
-console.log(oddEven(10));
-console.log(oddEven(11));
-console.log(oddEven("wecode"));
-console.log(oddEven("2"));
-
-let x = (oddEven(10));// //isse bhi kr skte h
-console.log(x);
-
-let y = (oddEven(11));
-console.log(y);
-
-
-// // 5.
-function oddEven(a, b) {
-    if (a % 2 === 0 && b % 2 === 1) {
-        console.log("Yes");
-    }
-    else {
-        console.log("No");
-    }
-}
-oddEven(10, 11);
-oddEven(10, 110);
-
-
-// // 6.
-function table(a) {
-    for (i = 1; i <= 10; i++) {
-        console.log(i * a);
-    }
-}
-table(2);
-table(5);
-
-
-
-// // 7.
-function table(a, b) {
-    for (i = 1; i <= b; i++) {
-        console.log(i * a);
-    }
-}
-table(2, 10);
-table(5, 10);
-
-
-// // 8.
-function printtWords(a) {
-    for (i = 1; i <= a; i++) {
-        if (i % 2 === 0) {
-            console.log("Hello Word");
-        }
-        else {
-            console.log("Hello Wecode----------");
-        }
-
-    }
-}
-printtWords(10);
-
-
-
-
-
-
-
-
-function fn2() {
-    console.log(4);
-    console.log(5);
-    fn3(); //Cyclic Dependency - Neven Do This
-    console.log(6);
-}
-function fn3() {
-    console.log(7);
-    console.log(8);
-    console.log(9);
-    fn2(); //Cyclic Dependency - Neven Do This
-}
-fn2();
-
-
-// // Default Parameter 
-
-function sum(a, b = 200) {
-    console.log(a, b);
-    console.log(a + b);
-}
-sum(10, 100);
-
-
-function sum(a, b = 200) {
-    console.log(a, b);
-    console.log(a + b);
-}
-sum(10);
-
-
-function sum(a = 100, b = 200) {
-    console.log(a, b);
-    console.log(a + b);
-}
-sum();
-
-
-function sum(a = 100, b = 200) {
-    console.log(a, b);
-    console.log(a + b);
-}
-sum(undefined, undefined);
-sum(); //both are equal
-//value pass kr rhe hain to vo value consider hogi
-//value pass ni kr rhe hain to undefined
-//agar value undefined hai to default value consider hogi
-sum(10, 20);
-add(10, 20);
-
-
-function sum(a, b) {
-    console.log(a + b); //function declaration
-}
-sum(10, 20);
-
-const num = function (a, b) {
-    console.log(a + b); //function expression
-};
-num(10, 20);
-
-//1st Difference - Syntax
-//2nd Difference - We can not call function expression before declaration
-/* Function declaration ko hm jha code likha h uske pehle call/invoke kr skte h
-but Function expression ko code jha lkha he uske pehle call/invoke nhi kr skte
-*/
-
-// function (a, b) {
-//     console.log(a + b); //Anonymous Function - Function without name
-// };
-
-
-
-const max = function (num1, num2) {
-    if (num1 > num2) {
-        return num1;
-    } else if (num2 > num1) {
-        return num2;
-    } else {
-        return "Both are equal";
-    }
-};
-console.log(max(20, 20));
-
-
-function hello() {
-    console.log("Hello");
-}
-hello();
-
-
-eval('function hello() {console.log("Hello");} hello();');
-console.log(eval("46+2-3"));
-
-
-function sum(a, b) {
-    console.log(a + b); //function declaration
-}
-
-const add = function (a, b) {
-    console.log(a + b); //function expression
-};
-
-const plus = (a, b) => {
-    console.log(a + b); //arrow function
-};
-sum(10, 20);
-add(10, 20);
-plus(10, 20);
-
-
-const add2 = function (a, b) {
-    console.log(a + b); //function expression
-};
-add2(10, 20);
-
-
-const plus2 = (a, b) => console.log(a + b); //arrow function
-plus2(10, 20);
-
-
-
-function sum(a, b) {
-    return a + b;
-}
-console.log(sum(10, 20));
-
-
-const add3 = (a, b) => a + b;
-console.log(add3(10, 20));
-
-
-function sum(a, b) {
-    console.log("Hello");
-    return a + b;
-}
-console.log(sum(10, 20));
-
-
-const add4 = (a, b) => {
-    console.log("Hello");
-    return a + b;
-};
-console.log(add4(10, 20));
-
-
-
-
-
-
+# JavaScript Syllabus
+
+### Introduction
+
+- What is programming language?
+- What is front-end?
+- What is back-end?
+- Introduction
+  - HTML
+  - CSS
+  - JavaScript
+- Role of HTML, CSS, and JavaScript in WEB development?
+
+### History of JavaScript
+
+- JavaScript history
+- ECMAScript
+- Versions of JavaScript & History
+- Backward & Forward compatible
+
+### Visual Studio Code Setup
+
+- What is an IDE?
+- Downloading & Installing Visual Studio Code
+- Difference - File vs Folder vs Workspace
+- VSCode shortcuts
+- Installing extensions
+- Applying Settings & Default Formatter Setting
+
+### Project setup
+
+- Separation of concern
+- Setting up starter files
+
+## JavaScript Core
+
+### JavaScript Features
+
+- High Level Language
+- Garbage Collected
+- Interpreted Language (JIT)
+- Multi Paradigm
+- Prototype based functions
+- First Class Function
+- Dynamically Type
+- Single Threaded
+- Non-Blocking Event Loop
+- Platform Independent
+
+### Interaction
+
+- console.log
+- document.write()
+- window.alert()
+- innerHTML
+
+### Value, Variable and Data types
+
+- Value, Variable and Data Types
+- Difference between Primitive and Non-Primitive Data Types ?
+- Primitive Data types (In built data types)
+  - Number
+  - String
+  - Undefined
+  - Boolean
+  - Symbol
+  - BigInt
+- Non-primitive Data types
+  - Object
+  - function
+
+### Truthy and Falsy Values
+
+- What are the truthy and falsy values in JavaScript ?
+- Falsy values : undefined, 0, null, ‘’, false, NaN
+- Using Falsy and Truthy values in conditional statements
+
+### Type Conversion
+
+- Implicit type conversion/Automatic Type conversion/Coercion
+- Explicit type conversion/Manual Type conversion
+  - Number
+      - String to Number
+      - Boolean to Number
+      - Undefined to Number
+  - String
+      - Number to String
+      - Boolean to String
+      - Undefined to String
+  - Boolean
+      - String to Boolean
+      - Number to Boolean
+      - Undefined to Boolean
+
+### JavaScript Popup Boxes
+
+- Alert Box
+- Confirm Box
+- Prompt Box
+
+### Identifiers
+
+- What is an identifier ?
+- Rules for creating identifier
+- Reserved keywords
+
+### Comments
+
+- What is comment ?
+  - Single line comment
+  - Multi line comment
+- Coding guidelines for comments
+
+### Statement
+
+- What is a statement in programming ?
+- How to write a single line of statement ?
+- How to write a multi-line statement or code-block ?
+- Use of Semicolon and whitespace in statement.
+
+### let, const and var
+
+- let
+- const
+- var
+- Difference between let, const and var?
+- When to use let, const and var ?
+
+### JavaScript operators
+
+- Arithmetic operator
+  - \+	Addition
+  - \-	Subtraction
+  - \*	Multiplication
+  - **	Exponentiation (ES2016)
+  - /	Division
+  - %	Modulus (Division Remainder)
+  - ++	Increment
+  - --	Decrement
+  
+- Assignment operator
+  - =
+  - +=
+  - -=
+  - *=
+  - /=
+  - %=
+  - **=
+    
+- Comparison operator
+  - ==	equal to
+  - ===	equal value and equal type
+  - !=	not equal
+  - !==	not equal value or not equal type
+  - \>	greater than
+  - <	less than
+  - \>=	greater than or equal to
+  - <=	less than or equal to
+  - ?  ternary operator
+    
+- Logical operators
+  - &&	logical and
+  - ||	logical or
+  - !	logical not
+    
+- Operator precedence
+  - [Operator Precedence Table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table) 
+- Truth table of &&, || and !
+- Loose equality operator ==
+- Strict equality operator ===
+- Typeof operator
+- Ternary operator
+
+### Conditional statements
+
+- if
+- else if
+- else
+- Grouping multiple conditions using logical operator
+- Nested If else
+- Switch case
+
+### use strict
+
+- What is the significance of use strict ?
+- How JavaScrit behave without use strict ?
+
+### Looping and Switch
+
+- For Loop
+- While Loop
+- Do while loop
+- Loop inside loop
+- Backwards Loop
+- For of loop
+- For in loop
+- Break and continue
+
+### JavaScript String
+
+- What is a String ?
+- Uses of single quote `` and double quotes "" in string
+- Escape characters
+- How to create a String ?
+  - String Literal
+  - String Object
+- String Literal vs String Object ?
+- String length
+- String to Array
+- String Template Literal
+- String functions
+  - charAt
+  - slice
+  - substring
+  - substr
+  - replace
+  - repeat
+  - toUpperCase
+  - toLowerCase
+  - concat
+  - trim
+  - trimEnd
+  - trimStart
+  - padStart
+  - padEnd
+  - split
+  - indexOf
+  - valueOf
+  - lastIndexOf
+  - startsWith
+  - endsWith
+  - search
+  - match
+  - includes
+
+### Scope
+
+- What is Scoping
+- Lexical Scoping
+- Different types of scopes in JavaScript ?
+  - Global Scope
+  - Functional scope
+  - Block scope
+
+### Functions Basics
+
+- Type of functions ?
+  - Function declaration
+  - Function expression
+  - Arrow function
+  - Anonymous function
+- Difference between function declaration and function expression ?
+- Difference between function expression and arrow function ?
+- Function invoking/calling
+- Function calling from other function
+- Function as values
+- Function returning function
+- Parameters
+- Arguments
+- Arguments Object in functions
+- Default parameters
+- Passing arguments: value vs reference
+
+### Functions Advanced
+
+- First Class function/Citizen
+- High Order function
+- Callback function
+- setTimeOut
+- setInterval
+- The call and apply methods
+- The bind method
+- Immediately invoked function expression
+- Closures
+- Hoisting
+- Temporal Dead Zone (TDZ) 
+- DRY Principle
+- Generator function
+- Currying
+  eval()
+
+## Debugging
+
+- Debugging
+- Overview of Google chrome developer tools
+- Debugging points, adding a breakpoint
+- Fixing errors
+  - console.log
+  - console.warn
+  - console.error
+  - console.table
+- How to fix a bug, different steps:
+  - Identifying bug
+  - finding bug
+  - fixing bug
+  - Not repeat bugs
+- Different type of errors
+  - Syntax Error
+  - Reference Error
+  - Type Error
+  - Internal Error
+  - Range Error
+  - URI Error
+
+## Numbers and Dates
+
+### Number
+
+- 64-bit Floating Point Numbers
+- Converting numbers
+- Number System
+  - Binary
+  - Octal
+  - Decimal
+  - HexaDecimal
+- Checking numbers
+- Math and Rounding
+- The Reminder operator
+- Numeric Separators
+- BigInt
+  - Working with BigInt
+  - Exceptions in BigInt
+- Number class functions
+  - toFixed
+  - toString
+  - valueOf
+  - Number constructor
+  - parseInt
+  - parseFloat
+  - isNaN
+- Number Properties
+  - MAX_VALUE
+  - MIN_VALUE
+  - POSITIVE_INFINITY
+  - NEGATIVE_INFINITY
+  - NaN
+  - Infinity
+- Internationalization Numbers
+
+### Date
+
+- What is Date ?
+- Creating Dates using different ways of creating Date object
+- Understanding milliseconds and other units of time
+- Date setter methods
+- Date getter methods
+- Internationalization Dates
+
+## JavaScript Data Structures
+
+### Array
+
+- What is an Array ?
+- Need of an Array ?
+- How to create an Array ?
+  - Array Literal
+  - Array Object
+- Index in Array
+- Array length property
+- Array Declaration
+- Looping Array
+- Array functions
+  - sort
+  - push
+  - pop
+  - unshift
+  - shift
+  - toString
+  - join
+  - concat
+  - splice
+  - slice
+  - sort
+  - reverse
+  - forEach
+  - at
+  - map
+  - filter
+  - reduce
+  - find
+  - findIndex
+  - some
+  - every
+  - flat
+  - flatMap
+
+### Object
+
+- What is an object ?
+- Creating object
+  - Object literal syntax
+  - new keyword
+- Annotation
+  - Dot
+  - Bracket
+- Object properties
+  - Key
+  - Value
+- Array in Object
+- Function in Object
+- Uses of this in Object
+- Object methods
+  - Keys
+  - Values
+  - Entries
+- For Of Loop In Object
+  - Object.keys()
+  - Object.values()
+  - Object.entries()
+
+### Set
+
+- What is a Set ?
+- Creating set
+- Elements order in Set
+- Set Functions
+  - size()
+  - has()
+  - delete()
+  - other functions
+- Index in set
+- Printing set values using for of loop
+- Creating set to array
+- forEach method
+- WeakSet
+
+### Map
+
+- What is a Map ?
+- Creating new map
+- Adding value in map
+- Chaining in map
+- Functions
+  - get()
+  - has()
+  - size()
+  - clear()
+- Array as key
+- Iteration of Map
+- Object to map
+- Map to array
+- forEach function on map
+- WeakMap
+
+## Modern Features
+
+### Destructuring Arrays
+
+- What is destructuring
+- Reverse values using destructuring
+- Returning two values from function
+- Destructuring of nested array
+- Setting default values in Destructuring
+- Destructuring Objects
+- Extract value in Destructuring
+- Different property name in Destructuring
+- Nested Object Destructuring
+- Destructuring in function
+
+### The Spread Operator
+
+- Copy Array
+- Join 2 Arrays
+- String to array using spread operator
+- Passing array in function and spread to parameters using spread
+- Shallow copy using spread operator
+
+### The Rest Parameter
+
+- Assign values
+- Rest element last element
+- Assign values in object
+- Variable arguments in function
+
+### Short Circuiting
+
+- Use of ||
+- Replace with ternary operator
+- Working of short circuiting with non nullish values
+- Use of &&
+- Calling function using &&
+- The Nullish Coalescing Operator ??
+- Logical Assignment Operator
+  - ||=
+  - &&=
+  - ??=
+
+### Enhanced Object literals
+
+- Exactly same name
+- Function in object
+- Compute property name
+
+### Optional Chaining
+
+- Multiple condition in if condition
+- Work for nullish
+- Checking if method exist
+- Checking array is empty
+
+## JavaScript DOM and BOM
+
+### DOM (Document Object Model)
+
+- Introduction
+- DOM functions
+  - getElementById
+  - getElementsByTagName
+  - getElementsByClassName
+  - querySelector
+  - querySelectorAll
+  - write()
+- Properties
+  - innerHTML
+  - attribute
+  - style.property
+  - textContent
+- Forms
+  - Forms validation
+  - Properties
+    - Disabled
+    - Max
+    - Min
+    - Pattern
+    - Required
+- Type of Events
+  - Onclick
+  - Onchange
+  - Other events
+- Mouse events
+  - Onmousedown
+  - Onmouseup
+  - Other events
+- Event Listener
+  - addEventListener
+  - Event bubbling
+  - Event capturing
+  - Event Delegation
+- Navigation
+  - parentNode
+  - childNodes
+  - firstChild
+  - lastChild
+  - nextSibling
+  - previousSibling
+- DOM Nodes
+  - createElement
+  - createTextNode
+  - appendChild
+
+### JavaScript BOM
+
+- Window
+- History
+- Navigator
+- Screen
+- Location
+- Timing
+- Cookies
+- LocalStorage
+
+## RegExp
+
+- What is Regex
+- search()
+- exec()
+- test()
+- match()
+
+## Json & XML
+
+- What is JSON?
+- Rules for creating valid JSON?
+- What is XML?
+- Rules for creating valid XML?
+
+### JavaScript Inside
+
+- JavaScript Engine
+- Call Stack
+- Execution Context
+- Memory/Heap
+- Compiler
+- Interpreter
+- Compiler Vs Interpreter
+- Event Loop
+- Execution Context consists of 3 things:
+  - Variable Environment
+    - let, const and var declarations
+    - functions
+    - Arguments Objects
+  - Scope Chain
+  - this keyword
+- Execution Context divides in two parts
+    - Type of execution context
+      - Global
+      - Functional
+- Creation Phase
+- Code Phase
+- Scope Chain:
+  - Scoping: How our programs variables are organized and accessed
+- 3 types:
+  - Global Scope
+  - Local/Function Scope
+  - Block Scope
+- this key word
+  - this in global scope
+  - this in function
+  - this in object
+  - this in arrow function
+  - this in inside function inside object
+- Primitive vs Object
+  - Understanding of how primitive and non-primitives are stored in memory
+  - Copying object
+  - Copy first level properties
+    - Shallow copy
+    - Deep copy
+
+## OOPS
+
+### JavaScript OOPs
+
+- OOPs Concepts
+  - Object
+  - Class
+  - Abstraction
+  - Encapsulation
+  - Inheritance
+  - Polymorphism
+- OOPs in JavaScript
+  - Constructor functions and new operator
+    - Prototypes
+    - Native Prototype
+    - Prototypal inheritance and prototype chain
+    - Prototypal inheritance on Built-in objects
+  - ES6 classes
+    - Setters and Getters
+    - Static methods
+    - Object.create
+    - Inheritance between classes
+  - Object.create function
+  - Inheritance 
+    - Through constructor functions
+    - Using ES6 classes
+    - Using object.create
+  - Encapsulation
+    - Protected Properties and Methods
+    - Private Class Fields and Methods
+- Chaining methods
+- Mixins
+
+## Asynchronous JavaScript
+
+- What is Asynchronous ?
+- Ajax
+- What is an API ?
+- XMLHttpRequest
+- How the web works
+  - Server
+  - Client
+  - Request
+  - Response
+- Callback
+- Error Handling
+  - Try catch
+- Promise
+  - Promise and Fetch API
+    - Cross Origin
+    - Download progress
+    - Abort
+    - Consuming Promises
+    - Chaining Promises
+    - Handling Rejected Promises
+  - Asynchronous
+    - The Event Loop
+    - Create a Simple Promise
+    - Consuming Promise using Async/Await
+    - Returning values from Async functions
+  - Running promises in Parallel
+  - Promise Combinators
+     - race 
+     - allSettled
+     - any
+
+## Modern JavaScript Tools and Techniques
+
+- Modules
+  - Exporting and importing in Modules
+  - Top-Level await
+  - The Module Pattern
+- Bundling With Parcel and NPM Scripts
+- Babel and Polyfilling
+- Transpiling
+- Polyfilling
+- Transpiling vs Polyfilling
