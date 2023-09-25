@@ -373,7 +373,6 @@
   - concat
   - splice
   - slice
-  - sort
   - reverse
   - forEach
   - at
