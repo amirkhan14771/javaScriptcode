@@ -80,8 +80,8 @@
 
 ### Type Conversion
 
-- Implicit type conversion/Automatic Type conversion/Coercion
-- Explicit type conversion/Manual Type conversion
+- Implicit type conversion / Automatic Type conversion / Coercion
+- Explicit type conversion / Manual Type conversion
   - Number
       - String to Number
       - Boolean to Number
@@ -132,9 +132,9 @@
 ### JavaScript operators
 
 - Arithmetic operator
-  - \+	Addition
-  - \-	Subtraction
-  - \*	Multiplication
+  - +	Addition
+  - -	Subtraction
+  - *	Multiplication
   - **	Exponentiation (ES2016)
   - /	Division
   - %	Modulus (Division Remainder)
@@ -167,7 +167,8 @@
   - !	logical not
     
 - Operator precedence
-  - [Operator Precedence Table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table) 
+  - [Operator Precedence Table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table)
+  - 
 - Truth table of &&, || and !
 - Loose equality operator ==
 - Strict equality operator ===
@@ -180,7 +181,7 @@
 - else if
 - else
 - Grouping multiple conditions using logical operator
-- Nested If else
+- Nested if else
 - Switch case
 
 ### use strict
@@ -202,7 +203,7 @@
 ### JavaScript String
 
 - What is a String ?
-- Uses of single quote `` and double quotes "" in string
+- Uses of single quote '' and double quotes "" in string
 - Escape characters
 - How to create a String ?
   - String Literal
