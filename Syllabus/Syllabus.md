@@ -49,7 +49,7 @@
 
 ### Interaction
 
-- console.log
+- console.log()
 - document.write()
 - window.alert()
 - innerHTML
@@ -67,7 +67,10 @@
   - BigInt
 - Non-primitive Data types
   - Object
-  - function
+  - Array
+  - Set
+  - Map
+  - Function
 
 ### Truthy and Falsy Values
 
