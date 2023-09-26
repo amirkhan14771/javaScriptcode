@@ -423,7 +423,8 @@
   - other functions
 - Index in set
 - Printing set values using for of loop
-- Creating set to array
+- Creating Set to Array
+- Creating Array to Set
 - forEach method
 - WeakSet
 
