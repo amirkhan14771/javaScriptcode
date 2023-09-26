@@ -442,7 +442,8 @@
 - Array as key
 - Iteration of Map
 - Object to map
-- Map to array
+- Map to Array
+- Array to Map
 - forEach function on map
 - WeakMap
 
