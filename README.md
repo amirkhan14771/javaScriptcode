@@ -24,6 +24,7 @@
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=amirkhan14771&" alt="amirkhan14771" /></p>
 
+---
 ## 📚 [_JavaScript Syllabus_](./Syllabus/Syllabus.md/)
 
 
