@@ -7,7 +7,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=amirkhan14771&label=Profile%20views&color=0e75b6&style=flat" alt="amirkhan14771" /> </p>
 
-- 🌱 I’m currently learning **Noje.js**
+- 🌱 I’m currently learning **React.js**
 
 - 📫 How to reach me **amirkhan14771@gmail.com**
 
