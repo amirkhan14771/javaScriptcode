@@ -455,6 +455,7 @@ hello();
 eval('function hello() {console.log("Hello");} hello();');
 console.log(eval("46+2-3"));
 
+// *****************************************************************************************
 
 function sum(a, b) {
     console.log(a + b); //function declaration
@@ -470,6 +471,8 @@ const plus = (a, b) => {
 sum(10, 20);
 add(10, 20);
 plus(10, 20);
+
+// *******************************************************************************************
 
 
 const add2 = function (a, b) {
